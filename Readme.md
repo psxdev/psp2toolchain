@@ -1,8 +1,7 @@
-
- ====================
- What does this do?
- ====================
-
+ ===================
+  What does this do?
+ ===================
+ 
   This program will automatically build and install a compiler and other
   tools used in the creation of homebrew software for the Sony PlayStation Vita
   videogame system (psp2).
