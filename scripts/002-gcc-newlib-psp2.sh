@@ -59,7 +59,7 @@ cd ${GCC}/build-psp2
 	--disable-libmudflap \
 	--disable-werror \
 	--enable-lto \
-	--with-headers=../newlib-$NEWLIB_VER/newlib/libc/include \
+	--with-headers=../${NEWLIB}/newlib/libc/include \
 	--with-march=armv7-r \
 	--enable-poison-system-directories \
 	--disable-win32-registry \
