@@ -1,4 +1,4 @@
-PSPTOOLCHAIN
+PSP2TOOLCHAIN
 ============
  
 ===================
