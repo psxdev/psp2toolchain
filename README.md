@@ -70,7 +70,7 @@ PSP2TOOLCHAIN
   COLLECT_GCC=./arm-none-eabi-gcc
   COLLECT_LTO_WRAPPER=/usr/local/psp2/host-osx/libexec/gcc/arm-psp2-eabi/4.9.2/lto-wrapper
   Target: arm-psp2-eabi
-  Configured with: ../configure --prefix=/usr/local/psp2/host-osx --target=arm-psp2-eabi --enable-languages=c,c++,objc,obj-c++ --with-gnu-as --with-gnu-ld --with-gcc --enable-interwork --enable-multilib --with-newlib --disable-libssp --disable-libgomp --disable-nls --disable-debug --disable-libmudflap --disable-werror --enable-lto --with-headers=../newlib-/newlib/libc/include --with-march=armv7-r --enable-poison-system-directories --disable-win32-registry --disable-dependency-tracking --enable-threads --disable-libstdcxx-pch CXXFLAGS='-g -O2 -fbracket-depth=2048' CFLAGS_FOR_TARGET=-O2 CXXFLAGS_FOR_TARGET=-O2
+  Configured with: ../configure --prefix=/usr/local/psp2/host-osx --target=arm-psp2-eabi --enable-languages=c,c++,objc,obj-c++ --with-gnu-as --with-gnu-ld --with-gcc --enable-interwork --enable-multilib --with-newlib --disable-libssp --disable-libgomp --disable-nls --disable-debug --disable-libmudflap --disable-werror --enable-lto --with-headers=../newlib-2.2.0/newlib/libc/include --with-march=armv7-r --enable-poison-system-directories --disable-win32-registry --disable-dependency-tracking --enable-threads --disable-libstdcxx-pch CXXFLAGS='-g -O2 -fbracket-depth=2048' CFLAGS_FOR_TARGET=-O2 CXXFLAGS_FOR_TARGET=-O2
   Thread model: single
   gcc version 4.9.2 (GCC)
   
