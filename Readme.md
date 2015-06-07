@@ -9,11 +9,11 @@
   
   It is based on:
   
-  * [ps3dev-mountain-lion](https://github.com/bigboss-ps3dev/ps3dev-mountain-lion). My builder for osx for Sony's toolchain and Sony's SDK and for ps3dev's toolchain and psl1ght's SDK.
+  * [ps3dev-mountain-lion](https://github.com/bigboss-ps3dev/ps3dev-mountain-lion) My builder for osx for Sony's toolchain and Sony's SDK and for ps3dev's toolchain and psl1ght's SDK.
   
-  * [ps3toolchain](https://github.com/ps3dev/ps3toolchain). Homebrew toolchain for Sony PlayStation 3.
+  * [ps3toolchain](https://github.com/ps3dev/ps3toolchain) Homebrew toolchain for Sony PlayStation 3.
   
-  * [buildscript](https://github.com/devkitPro/buildscripts). Build script from devKitProARM i use some of their options to compile you can compare both option later in this readme.
+  * [buildscript](https://github.com/devkitPro/buildscripts)  Build script from devKitProARM i use some of their options to compile you can compare both option later in this readme.
   
  ==================
   How do I use it?
