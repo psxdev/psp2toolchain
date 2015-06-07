@@ -1,6 +1,6 @@
 
  ====================
-  What does this do?
+ What does this do?
  ====================
 
   This program will automatically build and install a compiler and other
