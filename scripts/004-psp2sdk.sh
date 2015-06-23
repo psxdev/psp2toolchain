@@ -15,11 +15,9 @@ git pull
 ./autogen.sh
 
 cd src
-./autogen.sh
 make
 
 cd ../tools
-./autogen.sh
 make
 
 echo "TODO SDK INSTALLATION " 

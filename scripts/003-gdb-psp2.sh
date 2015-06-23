@@ -30,7 +30,7 @@ cd ${GDB}/build-psp2
 
 
 ## Configure the build.
-../configure --prefix="$PSP2/host-osx" --target="arm-psp2-eabi" \
+../configure --prefix="$PSP2/host-osx" --target="arm-none-eabi" \
     --enable-multilib \
     --enable-interwork \
 	--disable-nls \

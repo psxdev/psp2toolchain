@@ -27,7 +27,7 @@ fi
 cd ${BINUTILS}/build-psp2
 
 ## Configure the build.
-../configure --prefix="$PSP2/host-osx" --target="arm-psp2-eabi" \
+../configure --prefix="$PSP2/host-osx" --target="arm-none-eabi" \
 	--disable-nls \
 	--disable-dependency-tracking \
 	--disable-werror \

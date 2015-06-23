@@ -44,7 +44,7 @@ fi
 cd ${GCC}/build-psp2
 
 ## Configure the build. In mavericks problem with depth bracket and clang fixed but you must not include in target the fix because it is not support fbracket option it was a little nightmare find it
-../configure --prefix="$PSP2/host-osx" --target="arm-psp2-eabi" \
+../configure --prefix="$PSP2/host-osx" --target="arm-none-eabi" \
 	--enable-languages="c,c++,objc,obj-c++" \
 	--with-gnu-as \
 	--with-gnu-ld \
@@ -58,8 +58,9 @@ cd ${GCC}/build-psp2
 	--disable-debug \
 	--disable-libmudflap \
 	--disable-werror \
+	--enable-plugins \
 	--enable-lto \
-	--with-headers=../newlib-$NEWLIB_VER/newlib/libc/include \
+	--with-headers=../${NEWLIB}/newlib/libc/include \
 	--with-march=armv7-r \
 	--enable-poison-system-directories \
 	--disable-win32-registry \
@@ -83,7 +84,7 @@ fi
 ## Compile and install newlib.
 cd ${NEWLIB}/build-psp2
 
-../configure --prefix="$PSP2/host-osx" --target="arm-psp2-eabi" \
+../configure --prefix="$PSP2/host-osx" --target="arm-none-eabi" \
 	--disable-newlib-supplied-syscalls \
 	--enable-newlib-mb 
 
