@@ -83,9 +83,7 @@ PSP2TOOLCHAIN
  
   * PSP2SDK installation. Right now it compiles only full sdk cloned from [psp2sdk](https://github.com/173210/psp2sdk) without errors. Check scripts folder.
   
-  * PSP2 Loader. Waiting for yifanlu.
   
-  * Samples for final user to run on PSP2 :P.
   
   
 
