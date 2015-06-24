@@ -32,6 +32,8 @@ PSP2TOOLCHAIN
  2) Add the following to your login script:
 
   export PSP2=/usr/local/psp2
+  
+  export PSP2SDK=$PSP2
 
   export PATH=$PSP2/bin:$PSP2/host-osx/bin:$PATH
   
@@ -76,14 +78,12 @@ PSP2TOOLCHAIN
   
   As you can see it is a X86_64 osx binary and i include only binutils and compilers for psp2 no more extras for other platforms that i am not going to use. Check -fbracket-depth=2048 option it was a nightmare with a depth bracket problem before find it and fix it.
   
+  ===========================
+  What's next?
+  ===========================
   
- ======
-  TODO
- ======
+  Ready to have a lot of fun...
+  
  
-  * PSP2SDK installation. Right now it compiles only full sdk cloned from [psp2sdk](https://github.com/173210/psp2sdk) without errors. Check scripts folder.
-  
-  
-  
   
 

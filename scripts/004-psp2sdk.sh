@@ -11,13 +11,17 @@ fi
 cd psp2sdk
 git pull
 
-## Configure the build.
-./autogen.sh
+echo Configure the build.
+./autogen.sh --prefix=$PSP2SDK
 
-cd src
-make
+echo Compiling and installing PSP2SDK to /usr/local/psp2
+make -C src install -j8
+make -C tools install -j8
 
-cd ../tools
-make
+echo Copying specs to $PSP2SDK/host-osx/arm-none-eabi/lib
+cd $PSP2SDK
+cp psp2.* $PSP2SDK/host-osx/arm-none-eabi/lib
 
-echo "TODO SDK INSTALLATION " 
+echo Ready to have a lot of fun...
+
+
