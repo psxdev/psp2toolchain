@@ -60,13 +60,14 @@ cd ${GCC}/build-psp2
 	--disable-werror \
 	--enable-plugins \
 	--enable-lto \
-	--with-headers=../${NEWLIB}/newlib/libc/include \
 	--with-march=armv7-r \
+	--with-cpu=cortex-a9 \
+	--with-fpu=neon-fp16 \
 	--enable-poison-system-directories \
 	--disable-win32-registry \
 	--disable-dependency-tracking \
-	--enable-threads \
 	--disable-libstdcxx-pch \
+	--disable-libstdcxx-verbose \
 	 CXXFLAGS="-g -O2 -fbracket-depth=2048" CFLAGS_FOR_TARGET="-O2" CXXFLAGS_FOR_TARGET="-O2"
 
 
@@ -97,4 +98,20 @@ cd ${GCC}/build-psp2
 ${MAKE:-make} all
 ${MAKE:-make} install
 
+PSP2LIB="$PSP2/host-osx/arm-none-eabi/lib/psp2"
+echo Installing libgcc and libsupc++ in $PSP2LIB
 
+install -d $PSP2LIB $PSP2LIB/fpu $PSP2LIB/thumb
+cd arm-none-eabi
+install libgcc/libgcc.a "$PSP2LIB/libgcc.a"
+install libstdc++-v3/libsupc++/.libs/libsupc++.a "$PSP2LIB/libsupc++.a"
+
+cd armv6k/fpu
+install libgcc/libgcc.a "$PSP2LIB/fpu/libgcc.a"
+install libstdc++-v3/libsupc++/.libs/libsupc++.a "$PSP2LIB/fpu/libsupc++.a"
+cd ../..
+
+cd thumb
+install libgcc/libgcc.a "$PSP2LIB/thumb/libgcc.a"
+install libstdc++-v3/libsupc++/.libs/libsupc++.a "$PSP2LIB/thumb/libsupc++.a"
+cd ../..

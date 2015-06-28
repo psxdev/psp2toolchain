@@ -5,7 +5,7 @@ set -e
 if [ ! -d psp2sdk ]; then
 
 ## Download the source code.
-git clone https://github.com/173210/psp2sdk
+git clone https://github.com/psp2dev/psp2sdk
 
 fi
 cd psp2sdk
