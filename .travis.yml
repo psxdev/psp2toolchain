@@ -8,6 +8,7 @@ language: objective-c
 before_install:
  - brew update && brew outdated cmake || brew upgrade cmake
  - brew outdated libelf || brew upgrade libelf
+
 	
 script:
  - mkdir psp2
