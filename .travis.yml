@@ -10,7 +10,7 @@ before_install:
  - brew install libelf
 script:
  - mkdir psp2
- - ./toolchain.sh > output.txt 2> error.txt
+ - ./compile_travis.sh
  - ls -l psp2 psp2/host-osx psp2/inclide psp2/lib psp2/bin
  - grep error  error.txt
 
