@@ -9,7 +9,7 @@ if [ ! -d ${BINUTILS} ]; then
   if [ ! -f ${BINUTILS}.tar.bz ]; then wget --continue ftp://ftp.gnu.org/gnu/binutils/${BINUTILS}.tar.bz2; fi
 
   ## Unpack the source code.
-  tar xfvj ${BINUTILS}.tar.bz2
+  tar xfj ${BINUTILS}.tar.bz2
 
   ## Patch the source code.
   cat ../patches/binutils-2.25.patch | patch -p1 -d ${BINUTILS}

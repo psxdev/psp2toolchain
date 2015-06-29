@@ -9,7 +9,7 @@ if [ ! -d ${GDB} ]; then
   if [ ! -f ${GDB}.tar.gz ]; then wget --continue ftp://ftp.gnu.org/gnu/gdb/${GDB}.tar.gz; fi
 
   ## Unpack the source code.
-  tar xfvj ${GDB}.tar.gz
+  tar xfj ${GDB}.tar.gz
 
 ## Patch the source code.
  # cat ../patches/${GDB}-armosx-bug141540.patch | patch -p1 -d ${GDB}

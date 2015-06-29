@@ -11,8 +11,8 @@ if [ ! -d ${GCC} ]; then
   if [ ! -f ${NEWLIB}.tar.gz ]; then wget --continue ftp://sources.redhat.com/pub/newlib/${NEWLIB}.tar.gz; fi
 
   ## Unpack the source code.
-  rm -Rf ${GCC} && tar xfvj ${GCC}.tar.bz2
-  rm -Rf ${NEWLIB} && tar xfvz ${NEWLIB}.tar.gz
+  rm -Rf ${GCC} && tar xfj ${GCC}.tar.bz2
+  rm -Rf ${NEWLIB} && tar xfz ${NEWLIB}.tar.gz
 
   ## Patch the source code.
  cat ../patches/${GCC}.patch | patch -p1 -d ${GCC}
