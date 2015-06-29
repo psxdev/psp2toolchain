@@ -1,0 +1,20 @@
+compiler:
+    - gcc
+    - clang
+
+language: objective-c
+
+before_install:
+ - brew update && brew outdated cmake || brew upgrade cmake
+ - brew outdated libelf || brew upgrade libelf
+script:
+ - mkdir psp2
+ - ./toolchain.sh 
+ - ls -l psp2 psp2/host-osx psp2/inclide psp2/lib psp2/bin
+env:
+ global:
+  - TOP=$PWD
+  - PSP2=$TOP/psp2
+  - PSP2SDK=$PSP2
+  - PATH=$PSP2/host-osx/bin:$PSP2/bin:$PATH
+ 
