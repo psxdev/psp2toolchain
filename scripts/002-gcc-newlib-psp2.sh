@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # gcc-newlib-psp2.sh by Antonio Jose Ramos Marquez aka bigboss (@psxdev)
 
-GCC="gcc-4.9.2"
+GCC="gcc-5.1.0"
 NEWLIB="newlib-2.2.0"
 
 if [ ! -d ${GCC} ]; then
@@ -15,7 +15,7 @@ if [ ! -d ${GCC} ]; then
   rm -Rf ${NEWLIB} && tar xfz ${NEWLIB}.tar.gz
 
   ## Patch the source code.
- cat ../patches/${GCC}.patch | patch -p1 -d ${GCC}
+ #cat ../patches/${GCC}.patch | patch -p1 -d ${GCC}
  cat ../patches/${NEWLIB}.patch | patch -p1 -d ${NEWLIB}
 
   ## Enter the source code directory.
@@ -45,7 +45,7 @@ cd ${GCC}/build-psp2
 
 ## Configure the build. In mavericks problem with depth bracket and clang fixed but you must not include in target the fix because it is not support fbracket option it was a little nightmare find it
 ../configure --prefix="$PSP2/host-osx" --target="arm-none-eabi" \
-	--enable-languages="c,c++,objc,obj-c++" \
+	--enable-languages="c,c++" \
 	--with-gnu-as \
 	--with-gnu-ld \
 	--with-gcc \
@@ -106,10 +106,10 @@ cd arm-none-eabi
 install libgcc/libgcc.a "$PSP2LIB/libgcc.a"
 install libstdc++-v3/libsupc++/.libs/libsupc++.a "$PSP2LIB/libsupc++.a"
 
-cd armv6k/fpu
+cd fpu
 install libgcc/libgcc.a "$PSP2LIB/fpu/libgcc.a"
 install libstdc++-v3/libsupc++/.libs/libsupc++.a "$PSP2LIB/fpu/libsupc++.a"
-cd ../..
+cd ..
 
 cd thumb
 install libgcc/libgcc.a "$PSP2LIB/thumb/libgcc.a"

@@ -5,7 +5,7 @@ set -e
 PSP2LIBDIR=$PSP2SDK/host-osx
 if [ ! -d psp2lib ]; then
 ## Download the source code.
-git clone https://github.com/psp2dev/psp2lib
+git clone https://github.com/psxdev/psp2lib
 
 fi
 cd psp2lib
